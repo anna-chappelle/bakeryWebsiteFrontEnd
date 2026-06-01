@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendUrl: "http://bakerywebsite.railway.internal:8080"
+  backendUrl: "https://website-backend-production-0aee.up.railway.app:8080"
 };
