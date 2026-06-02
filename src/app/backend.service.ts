@@ -11,7 +11,7 @@ export class BackendService {
   readonly #http = inject(HttpClient);
 
   testBackend(): void {
-    this.#http.get(this.url)
+    this.#http.get(this.url + "/test")
       .pipe(
         tap(val => console.dir(val))
       ).subscribe();
