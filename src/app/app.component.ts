@@ -14,7 +14,7 @@ import { tap, pipe } from 'rxjs';
 export class AppComponent implements OnInit {
   readonly backendService = inject(BackendService);
   title = 'bakery-website-frontend';
-  backendResponse = signal<string>('');
+  backendResponse = signal<string>('~loading~');
 
   ngOnInit(): void {
     this.backendService.testBackend().pipe(
