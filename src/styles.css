@@ -14,3 +14,8 @@
 html {
   background-color: var(--main-bg-color);
 }
+
+body {
+  width: min(95vw, 50rem);
+  margin: 0 auto;
+}
