@@ -17,5 +17,6 @@ html {
 
 body {
   width: min(95vw, 50rem);
-  margin: 0 auto;
+  margin-inline: auto;
+  margin-top: 0.75rem;
 }
