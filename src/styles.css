@@ -6,3 +6,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --main-bg-color: #f7d8d0;
+}
+
+html {
+  background-color: var(--main-bg-color);
+}
