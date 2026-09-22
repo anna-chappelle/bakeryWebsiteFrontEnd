@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build -c production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +34,7 @@
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.12.0",
+    "husky": "^9.1.7",
     "jasmine-core": "~5.6.0",
     "jiti": "^2.7.0",
     "karma": "~6.4.0",
@@ -40,8 +42,12 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^17.5.1",
     "prettier": "^3.9.8",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.70.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
