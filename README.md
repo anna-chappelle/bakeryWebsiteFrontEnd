@@ -2,14 +2,14 @@
 
 Built with Node, Typescript, and Angular
 
-### Installing dependencies
+## Installing dependencies
 
 `npm i`
 
-### Building
+## Building
 
 `ng build`
 
-### Running
+## Running
 
 `ng serve`
