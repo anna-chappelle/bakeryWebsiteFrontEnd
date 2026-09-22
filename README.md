@@ -13,4 +13,3 @@ Built with Node, Typescript, and Angular
 ### Running
 
 `ng serve`
-
