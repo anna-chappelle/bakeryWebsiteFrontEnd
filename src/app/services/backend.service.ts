@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { environment } from '../environments/environment';
+import { environment } from '@environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class BackendService {
-  readonly url = environment.backendUrl;
-  readonly #http = inject(HttpClient);
+  private readonly BACKEND_URL = environment.backendUrl;
+  private readonly http = inject(HttpClient);
 
   testBackend(): Observable<object> {
-    return this.#http.get(this.url + '/test');
+    return this.http.get(this.BACKEND_URL + '/test');
   }
 }
