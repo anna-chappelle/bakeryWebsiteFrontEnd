@@ -20,6 +20,8 @@
     "@angular/platform-browser": "^21.2.15",
     "@angular/platform-browser-dynamic": "^21.2.15",
     "@angular/router": "^21.2.15",
+    "@ngrx/operators": "^21.1.1",
+    "@ngrx/signals": "^21.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

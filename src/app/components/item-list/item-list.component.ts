@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ItemStore } from 'app/stores/item.store';
 
 @Component({
   selector: 'app-item-list',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './item-list.component.html',
   styleUrl: './item-list.component.scss',
 })
-export class ItemListComponent {}
+export class ItemListComponent {
+  private readonly itemStore = inject(ItemStore);
+}

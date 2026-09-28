@@ -1,7 +1,8 @@
 import { inject, Injectable } from '@angular/core';
 import { environment } from '@environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { Item } from '@models/item.model';
 
 @Injectable({
   providedIn: 'root',
@@ -12,5 +13,15 @@ export class BackendService {
 
   testBackend(): Observable<object> {
     return this.http.get(this.BACKEND_URL + '/test');
+  }
+
+  getBakedGoods(): Observable<{ items: Item[] }> {
+    return of({
+      items: [
+        {
+          id: '1',
+        },
+      ],
+    });
   }
 }
