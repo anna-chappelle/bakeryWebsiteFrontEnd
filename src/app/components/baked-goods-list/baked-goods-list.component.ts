@@ -2,12 +2,12 @@ import { Component, inject } from '@angular/core';
 import { BakedGoodsStore } from '@stores/baked-goods.store';
 
 @Component({
-  selector: 'app-item-list',
+  selector: 'app-baked-goods-list',
   providers: [BakedGoodsStore],
   imports: [],
-  templateUrl: './item-list.component.html',
-  styleUrl: './item-list.component.scss',
+  templateUrl: './baked-goods-list.component.html',
+  styleUrl: './baked-goods-list.component.scss',
 })
-export class ItemListComponent {
+export class BakedGoodsListComponent {
   private readonly bakedGoodsStore = inject(BakedGoodsStore);
 }
