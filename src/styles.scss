@@ -14,9 +14,3 @@
 html {
   background-color: var(--main-bg-color);
 }
-
-body {
-  width: min(calc(100% - 1.25rem), 90rem);
-  margin-inline: auto;
-  margin-top: 0.75rem;
-}

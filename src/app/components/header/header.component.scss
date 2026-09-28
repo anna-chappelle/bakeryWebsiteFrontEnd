@@ -1,23 +1,27 @@
 .container {
   background-color: var(--secondary-bg-color);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-sections {
   display: flex;
   align-items: center;
   padding: 0.75rem 1.25rem;
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  width: min(calc(100% - 1.25rem), 90rem);
+  margin: 0 auto;
 }
 
-.header-left,
-.header-right {
+.header-sections__left,
+.header-sections__right {
   flex: 1;
 }
 
-.header-right {
+.header-sections__right {
   display: flex;
   justify-content: end;
 }
 
-.header-center {
+.header-sections__center {
   flex: 5;
 }
 
