@@ -6,6 +6,6 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-header',
   imports: [MatIconModule, MatButtonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {}
