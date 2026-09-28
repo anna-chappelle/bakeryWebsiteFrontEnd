@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { BakedGoodsStore } from 'app/stores/baked-goods.store';
+import { BakedGoodsStore } from '@stores/baked-goods.store';
 
 @Component({
   selector: 'app-item-list',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HeroComponent } from 'app/components/hero/hero.component';
-import { ItemListComponent } from 'app/components/item-list/item-list.component';
+import { HeroComponent } from '@components/hero/hero.component';
+import { ItemListComponent } from '@components/item-list/item-list.component';
 
 @Component({
   selector: 'app-home',
