@@ -5,6 +5,7 @@ import json from "@eslint/json";
 import markdown from "@eslint/markdown";
 import css from "@eslint/css";
 import { defineConfig, globalIgnores } from "eslint/config";
+import { scss } from "@humanwhocodes/scsstree";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
@@ -28,12 +29,14 @@ export default defineConfig([
     extends: ["markdown/recommended"],
   },
   {
-    files: ["**/*.css"],
+    files: ["**/*.scss"],
     plugins: { css },
     language: "css/css",
-    extends: ["css/recommended"],
+    languageOptions: {
+      customSyntax: scss,
+    },
     rules: {
-      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
+      "css/no-empty-blocks": "error",
     },
   },
   eslintConfigPrettier,
