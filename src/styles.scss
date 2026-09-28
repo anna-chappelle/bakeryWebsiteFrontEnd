@@ -9,6 +9,8 @@
 :root {
   --main-bg-color: #f2e1d3;
   --secondary-bg-color: #f0ead6;
+
+  --content-width: min(calc(100% - 1.25rem), 90rem);
 }
 
 html {

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   padding: 0.75rem 1.25rem;
-  width: min(calc(100% - 1.25rem), 90rem);
+  width: var(--content-width);
   margin: 0 auto;
 }
 
