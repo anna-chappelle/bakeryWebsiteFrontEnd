@@ -2,8 +2,8 @@ import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
-import { BackendService } from '@services/backend.service';
 import { tap } from 'rxjs';
+import { BakedGoodService } from '@services/baked-goods.service';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,17 @@ import { tap } from 'rxjs';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  private backendService = inject(BackendService);
+  private bakedGoodService = inject(BakedGoodService);
 
   ngOnInit(): void {
-    this.backendService
-      .testBackend()
-      .pipe(tap(() => console.log('backend called')))
+    this.bakedGoodService
+      .getAllBakedGoods()
+      .pipe(
+        tap((val) => {
+          console.log('backend called');
+          console.dir(val);
+        }),
+      )
       .subscribe();
   }
 }
