@@ -2,9 +2,9 @@ import { inject } from '@angular/core';
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { tapResponse } from '@ngrx/operators';
-import { BackendService } from '@services/backend.service';
 import { pipe, switchMap, tap } from 'rxjs';
 import { BakedGood } from '@models/baked-good.model';
+import { BakedGoodService } from '@services/baked-goods.service';
 
 type BakedGoodStoreState = {
   bakedGoods: BakedGood[];
@@ -18,15 +18,16 @@ const initialState: BakedGoodStoreState = {
 
 export const BakedGoodsStore = signalStore(
   withState(initialState),
-  withMethods((store, backendService = inject(BackendService)) => ({
+  withMethods((store, bakedGoodService = inject(BakedGoodService)) => ({
     loadBakedGoods: rxMethod<void>(
       pipe(
         tap(() => patchState(store, { isLoading: true })),
         switchMap(() => {
-          return backendService.getBakedGoods().pipe(
+          return bakedGoodService.getAllBakedGoods().pipe(
             tapResponse({
-              next: ({ bakedGoods }) =>
-                patchState(store, { bakedGoods, isLoading: false }),
+              next: (res) => {
+                console.log(res);
+              },
               error: (err) => {
                 patchState(store, { isLoading: false });
                 console.error(err);
