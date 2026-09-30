@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { BakedGood } from '@models/baked-good.model';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './baked-good.component.scss',
   templateUrl: './baked-good.component.html',
 })
-export class BakedGoodComponent {}
+export class BakedGoodComponent {
+  readonly bakedGood = input.required<BakedGood>();
+}

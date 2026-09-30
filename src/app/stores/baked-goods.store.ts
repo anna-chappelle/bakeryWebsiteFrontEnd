@@ -17,7 +17,7 @@ const initialState: BakedGoodStoreState = {
   isLoading: false,
 };
 
-export const BakedGoodsStore = signalStore(
+export const BakedGoodStore = signalStore(
   withState(initialState),
   withHooks((store, bakedGoodService = inject(BakedGoodService)) => ({
     /**

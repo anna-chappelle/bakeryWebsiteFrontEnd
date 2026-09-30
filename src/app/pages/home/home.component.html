@@ -1,4 +1,11 @@
 <div class="container">
   <app-hero></app-hero>
-  <app-baked-goods-list></app-baked-goods-list>
+
+  @if (bakedGoodStore.isLoading()) {
+    <p>Loading ...</p>
+  } @else {
+    <app-baked-goods-list
+      [bakedGoods]="bakedGoodStore.bakedGoods()"
+    ></app-baked-goods-list>
+  }
 </div>
