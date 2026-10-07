@@ -1,8 +1,14 @@
 <div class="baked-good">
   <div class="baked-good__image">
-    <img class="baked-good-image" ngSrc="cupcake.png" alt="" fill priority />
+    <img
+      class="baked-good-image"
+      ngSrc="{{ bakedGood().id + '.png' }}"
+      alt=""
+      fill
+      priority
+    />
   </div>
   <div class="baked-good__info">
-    <p>{{ bakedGood().name }}</p>
+    <p class="baked-good__info__title">{{ bakedGood().name }}</p>
   </div>
 </div>
