@@ -43,9 +43,9 @@
   font-size: 3em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .header-sections__right {
-    --shopping-cart-icon-size: 2rem;
+    --shopping-cart-icon-size: 1.75rem;
   }
 
   .header-sections__left {
@@ -54,10 +54,11 @@
 
   .header-sections {
     padding-inline: unset;
+    width: 90%;
   }
 
   .title {
     text-align: start;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
