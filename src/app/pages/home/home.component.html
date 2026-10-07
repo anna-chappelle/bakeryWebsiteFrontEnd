@@ -4,6 +4,7 @@
   @if (bakedGoodStore.isLoading()) {
     <p>Loading ...</p>
   } @else {
+    <h2>Goodies</h2>
     <app-baked-goods-list
       [bakedGoods]="bakedGoodStore.bakedGoods()"
     ></app-baked-goods-list>

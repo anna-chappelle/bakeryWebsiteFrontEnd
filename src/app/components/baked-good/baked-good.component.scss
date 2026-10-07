@@ -1,0 +1,18 @@
+.baked-good {
+  width: clamp(300px, 35vw, 400px);
+}
+
+.baked-good__image {
+  aspect-ratio: 1;
+  width: 100%;
+  position: relative;
+}
+
+.baked-good-image {
+  width: 100%;
+  height: 100%;
+}
+
+.baked-good__info {
+  background-color: cyan;
+}

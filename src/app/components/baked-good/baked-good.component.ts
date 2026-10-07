@@ -1,8 +1,9 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { BakedGood } from '@models/baked-good.model';
 
 @Component({
-  imports: [],
+  imports: [NgOptimizedImage],
   selector: 'app-baked-good',
   styleUrl: './baked-good.component.scss',
   templateUrl: './baked-good.component.html',

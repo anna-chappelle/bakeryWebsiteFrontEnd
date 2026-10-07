@@ -29,3 +29,17 @@
   text-align: center;
   font-size: 1.7em;
 }
+
+@media (max-width: 425px) {
+  .header-sections__left {
+    flex: 0;
+  }
+
+  .header-sections {
+    padding-inline: 0.5rem;
+  }
+
+  .title {
+    text-align: start;
+  }
+}

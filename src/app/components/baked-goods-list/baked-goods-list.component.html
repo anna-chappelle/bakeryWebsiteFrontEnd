@@ -1,3 +1,5 @@
-@for (bakedGood of bakedGoods(); track bakedGood.id) {
-  <app-baked-good [bakedGood]="bakedGood"></app-baked-good>
-}
+<div class="container">
+  @for (bakedGood of bakedGoods(); track bakedGood.id) {
+    <app-baked-good class="baked-good" [bakedGood]="bakedGood"></app-baked-good>
+  }
+</div>
