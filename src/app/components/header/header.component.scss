@@ -43,16 +43,21 @@
   font-size: 3em;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
+  .header-sections__right {
+    --shopping-cart-icon-size: 2rem;
+  }
+
   .header-sections__left {
     flex: 0;
   }
 
   .header-sections {
-    padding-inline: 0.5rem;
+    padding-inline: unset;
   }
 
   .title {
     text-align: start;
+    font-size: 2em;
   }
 }
