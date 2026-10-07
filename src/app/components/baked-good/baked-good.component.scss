@@ -1,5 +1,5 @@
 .baked-good {
-  width: clamp(300px, 35vw, 400px);
+  max-width: 500px;
 }
 
 .baked-good__image {

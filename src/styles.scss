@@ -7,12 +7,13 @@
 }
 
 :root {
-  --main-bg-color: #f2e1d3;
-  --secondary-bg-color: #f0ead6;
+  --main-bg-color: oklch(95.44% 0.0176 81.32);
+  --secondary-bg-color: oklch(92.3% 0.042 61.4);
 
-  --content-width: min(calc(100% - 1.25rem), 90rem);
+  --content-width: min(calc(100% - 5rem), 90rem);
 }
 
 html {
   background-color: var(--main-bg-color);
+  font-family: "Madimi One", sans-serif;
 }
