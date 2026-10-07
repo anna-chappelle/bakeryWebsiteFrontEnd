@@ -19,6 +19,19 @@
 .header-sections__right {
   display: flex;
   justify-content: end;
+  --shopping-cart-icon-size: 2.5rem;
+
+  & button {
+    width: var(--shopping-cart-icon-size);
+    height: var(--shopping-cart-icon-size);
+    padding: 0;
+  }
+
+  & mat-icon {
+    width: var(--shopping-cart-icon-size);
+    height: var(--shopping-cart-icon-size);
+    font-size: var(--shopping-cart-icon-size);
+  }
 }
 
 .header-sections__center {
@@ -27,7 +40,7 @@
 
 .title {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 3em;
 }
 
 @media (max-width: 425px) {
